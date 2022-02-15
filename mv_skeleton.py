@@ -1,10 +1,9 @@
-def get_product():
+def conversation():
     repeat = True
     while repeat == True:
         product = input(f"Which product would you like to review?\n")
         mv_skeleton_convo(product)
         repeat = review_Another()
-
 def mv_skeleton_convo(product):
     # Initial Prompt
     question = input(f"Would you like to review {product}?\n")
@@ -59,14 +58,15 @@ def mv_skeleton_convo(product):
             break
         else:
             question = input("Didn't quite get that. Can you please indicate yes or no?\n")
-
 def review_Another():
     reviewNextProduct = input(f"Would you like to review another product?")
     while True:
         if reviewNextProduct.lower() == 'yes':
             return True
         elif reviewNextProduct.lower() == 'no':
+            print ("Thank you for your time")
             return False
         else: 
             reviewNextProduct = input(f"Didn't quite get that. Can you please indicate yes or no?\n")   
+conversation()
 
