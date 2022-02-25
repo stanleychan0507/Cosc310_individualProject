@@ -26,8 +26,8 @@ def initial_conversation(product):
         else:
             question = input("Didn't quite get that. Can you please indicate yes or no?\n")
 
-def discuss_Another(product):
-    reviewNextProduct = input(f"Would you discuss another product?")
+def discuss_Another():
+    reviewNextProduct = input(f"Would you like to discuss another product?")
     while True:
         if reviewNextProduct.lower() == 'yes':
             opening_conversation()
@@ -53,6 +53,24 @@ def positive_feedback(product):
                 review = input("Didn't quite get that. Can you please indicate yes or no?\n")
         break
     
+def refund(product):
+    print('Do you have an order number?\n')
+    hasOrderNo = input()
+    if hasOrderNo.lower() == 'yes':
+        print('Please enter your order number.\n')
+        orderNo = input()
+        reason = input('What is the reason for your return?\n')
+        print('Alright, we will send you an email with the next steps.\n')
+    elif hasOrderNo.lower() == 'no':
+        print('Ok. What is the email adress you used to place your order?\n')
+        email = input()
+        reason = input('What is the reason for your return?\n')
+        print('Alright, we will send you an email with the next steps.\n')
+    else:
+        print("Didn't quite get that. Can you please indicate yes or no?\n")
+        refund(product)
+    discuss_Another()
+
 def negative_feedback(product):
     ## If customer is unsatisfied with product
     while True:
@@ -62,7 +80,7 @@ def negative_feedback(product):
         while True:
                 # If they want a refund, email will be sent. Break
                 if refund.lower() == "yes":
-                    print("Okay, we'll send you an email shortly to begin the process")
+                    refund(product)
                     break
 
                 # If they want don't want a refund, break
