@@ -6,7 +6,7 @@ def opening_conversation():
     while repeat == True:
         product = input(f"Which product would you like to discuss?\n")
         initial_conversation(product)
-        repeat = discuss_Another(product)
+        
 def initial_conversation(product):
     # Initial Prompt
     question = input(f"Are you satisfied with {product}?\n")
@@ -34,7 +34,7 @@ def discuss_Another():
             break
         elif reviewNextProduct.lower() == 'no':
             print ("Thank you for your time")
-            break
+            quit()
         else: 
             reviewNextProduct = input(f"Didn't quite get that. Can you please indicate yes or no?\n")   
         break
@@ -45,6 +45,7 @@ def positive_feedback(product):
         review = input(f"Great! Would you like to review the {product}?\n")
         while True:
             if review.lower() == "no":
+                
                 break
             elif review.lower() == "yes":
                 write_review(product)
@@ -76,30 +77,28 @@ def negative_feedback(product):
     while True:
         # If they are not happy with their purchase
         # Ask if they want a refund
-        refund = input("That's too bad. Would you like a refund?\n")
+        refundInput = input("That's too bad. Would you like a refund?\n")
         while True:
                 # If they want a refund, email will be sent. Break
-                if refund.lower() == "yes":
+                if refundInput.lower() == "yes":
                     refund(product)
                     break
 
                 # If they want don't want a refund, break
-                elif refund.lower() == "no":
+                elif refundInput.lower() == "no":
                     break
                 else: 
-                    refund = input("Didn't quite get that. Can you please indicate yes or no?\n")
+                    refundInput = input("Didn't quite get that. Can you please indicate yes or no?\n")
                
         # Ask if they want to review the product
         review = input("Would you like to review the product?\n")
         while True:
-            if review.lower() == "no":
-                break
+            if review.lower() == "no":          
+                discuss_Another()
             elif review.lower() == "yes":
                 write_review(product)
-                break
             else:
                 review = input("Didn't quite get that. Can you please indicate yes or no?\n")
-        break
 
 def write_review(product):
     name = input(f"What is your name? \n")
@@ -126,5 +125,7 @@ def deep_review(product):
         elif deepReview.lower() == 'no':
             break
         else: 
-            deepReview = input(f"Didn't quite get that. Can you please indicate yes or no?\n")              
+            deepReview = input(f"Didn't quite get that. Can you please indicate yes or no?\n")
+        discuss_Another()              
+        
 opening_conversation()
