@@ -1,3 +1,4 @@
+import tkinter
 from tkinter.messagebox import askServiceretrycancel
 from urllib import response
 #neded to download nltk for language processing
