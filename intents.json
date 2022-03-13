@@ -12,73 +12,116 @@
           "Good day"
         ],
         "responses": [
-          "Hey :-)",
-          "Hello, thanks for visiting",
-          "Hi there, what can I do for you?",
-          "Hi there, how can I help?"
+          "Hello, would you like to discuss a product or a service?",
+          "Hi there, would you like to discuss a product or a service?"
         ]
       },
       {
-        "tag": "goodbye",
-        "patterns": ["Bye", "See you later", "Goodbye"],
-        "responses": [
-          "See you later, thanks for visiting",
-          "Have a nice day",
-          "Bye! Come back again soon."
-        ]
-      },
-      {
-        "tag": "thanks",
-        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-        "responses": ["Happy to help!", "Any time!", "My pleasure"]
-      },
-      {
-        "tag": "items",
+        "tag": "product_initial",
         "patterns": [
-          "Which items do you have?",
-          "What kinds of items are there?",
-          "What do you sell?"
+          "Discuss a product please",
+          "I'd like to discuss a Product",
+          "I would like to discuss a product",
+          "Can we discuss a Product",
+          "Discuss"
         ],
         "responses": [
-          "We sell coffee and tea",
-          "We have coffee and tea"
+          "Sounds good! Would you like to leave a review or receive a refund on your most recently purchased product?",
+          "Okay. Would you like to leave a review or receive a refund for the last product you purchased?"
         ]
       },
       {
-        "tag": "payments",
+        "tag": "product_review",
         "patterns": [
-          "Do you take credit cards?",
-          "Do you accept Mastercard?",
-          "Can I pay with Paypal?",
-          "Are you cash only?"
+          "I would like to leave a Product review please",
+          "Product review",
+          "Can I leave a product review",
+          "Can I review a product"
         ],
         "responses": [
-          "We accept VISA, Mastercard and Paypal",
-          "We accept most major credit cards, and Paypal"
+          "Sounds good. Please begin your review with 'Product Review _', where the underline signifies a rating from 1 - 5 stars",
+          "Okay. Please begin your review with 'Product Review _', where the underline signifies a rating from 1 - 5 stars",
+          "Will do. Please begin your review with 'Product Review _', where the underline signifies a rating from 1 - 5 stars"
         ]
       },
       {
-        "tag": "delivery",
+        "tag": "product_review_received",
         "patterns": [
-          "How long does delivery take?",
-          "How long does shipping take?",
-          "When do I get my delivery?"
+          "Product Review 0",
+          "Product Review 1",
+          "Product Review 2",
+          "Product Review 3",
+          "Product Review 4",
+          "Product Review 5",
+          "Product Review"
         ],
         "responses": [
-          "Delivery takes 2-4 days",
-          "Shipping takes 2-4 days"
+          "Thank you for your review! Would you like to discuss another product or service? Remember to type 'quit' to leave at any time",
+          "Your review has been saved! Would you like to discuss another product or service? Remember to type 'quit' to leave at any time",
+          "We have received your review! Would you like to discuss another product or service? Remember to type 'quit' to leave at any time"
         ]
       },
       {
-        "tag": "funny",
+        "tag": "product_refund",
         "patterns": [
-          "Tell me a joke!",
-          "Tell me something funny!",
-          "Do you know a joke?"
+          "I would like to a refund please",
+          "Can I get a refund",
+          "refund"
         ],
         "responses": [
-          "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-          "What did the buffalo say when his son left for college? Bison."
+          "Sounds good. Alright, we will send you an email with the next steps. Would you like to discuss another product or service? Remember to type 'quit' to leave at any time?",
+          "Okay. Alright, we will send you an email with the next steps. Would you like to discuss another product or service? Remember to type 'quit' to leave at any time?",
+          "Will do. Alright, we will send you an email with the next steps. Would you like to discuss another product or service? Remember to type 'quit' to leave at any time?"
+        ]
+      },
+      {
+        "tag": "service_initial",
+        "patterns": [
+          "Service please",
+          "I'd like to review a service",
+          "Can I review a service",
+          "Service review"
+        ],
+        "responses": [
+          "Sounds good! Which of the following services would you like to review? \n - Massage \n - Haircuts \n - Pedicures",
+          "Okay! Which of the following services would you like to review? \n - Massage \n - Haircuts \n - Pedicures",
+          "Will do! Which of the following services would you like to review? \n - Massage \n - Haircuts \n - Pedicures"
+        ]
+      },
+      {
+        "tag": "service_review",
+        "patterns": [
+          "I would like to leave a review for the massage please",
+          "I would like to leave a review for the haircut please",
+          "I would like to leave a review for the pedicure please",
+          "Massage",
+          "Haircuts",
+          "Pedicures",
+          "Can I leave a massage review",
+          "Can I leave a haircut review",
+          "Can I leave a pedicure review"
+        ],
+        "responses": [
+          "Sounds good. Please begin your review with 'Service Review _', where the underline signifies a rating from 1 - 5 stars",
+          "Okay. Please begin your review with 'Service Review _', where the underline signifies a rating from 1 - 5 stars",
+          "Will do. Please begin your review with 'Service Review _', where the underline signifies a rating from 1 - 5 stars"
+        ]
+      },
+      {
+        "tag": "service_review_received",
+        "patterns": [
+          "Service Review 0",
+          "Service Review 1",
+          "Service Review 2",
+          "Service Review 3",
+          "Service Review 4",
+          "Service Review 5",
+          "Service Review"
+        ],
+        "responses": [
+          "Thank you for your review! If you liked their service, you can specify you want Mary for your next visit. Would you like to discuss another product or service? Remember to type 'quit' to leave at any time?",
+          "Your review has been saved! If you liked their service, you can specify you want James for your next visit. Would you like to discuss another product or service? Remember to type 'quit' to leave at any time?",
+          "We have received your review! If you liked their service, you can specify you want John for your next visit. Would you like to discuss another product or service? Remember to type 'quit' to leave at any time?"
         ]
       }
     ]
