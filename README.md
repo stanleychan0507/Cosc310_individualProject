@@ -188,7 +188,7 @@ Then, run app.py to start the chat bot:
 ![image](https://user-images.githubusercontent.com/61817636/158089817-452c73b5-2784-42f7-bb00-f37168f8d502.png)
 
 ## References (A3)
-To implement the GUI, PyTorch, and NLTK the following resources were used to implement all features:
-- [Contextual Chatbots with Tensorflow](https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077?gi=f7d03c3a78c3)
-- [Chat bot with PyTorch, NLP, and Deep Learning](https://www.youtube.com/watch?v=RpWeNzfSUHw&list=PLqnslRFeH2UrFW4AUgn-eY37qOAWQpJyg&ab_channel=PythonEngineer)
-- [GUI with Tkinter](https://www.youtube.com/watch?v=RNEcewpVZUQ)
+To implement the GUI, PyTorch, and NLTK the following resources were used:
+- [Contextual Chatbots with Tensorflow - Article](https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077?gi=f7d03c3a78c3)
+- [Chat bot with PyTorch, NLP, and Deep Learning - YouTube](https://www.youtube.com/watch?v=RpWeNzfSUHw&list=PLqnslRFeH2UrFW4AUgn-eY37qOAWQpJyg&ab_channel=PythonEngineer)
+- [GUI with Tkinter - YouTube](https://www.youtube.com/watch?v=RNEcewpVZUQ)
