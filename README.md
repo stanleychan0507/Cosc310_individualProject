@@ -26,8 +26,8 @@ If you get an error trying to run the program, run the following:
 First, run:
 ```python train.py```
 
-Then, run chat.py to start the chat bot:
-```python chat.py```
+Then, run app.py to start the chat bot:
+```python app.py```
 
 ## Conversation Flow (A3)
 ![image](https://user-images.githubusercontent.com/61817636/158088234-0a9e4185-52a1-454f-b4da-4a337ee09f65.png)
