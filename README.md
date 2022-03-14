@@ -192,4 +192,4 @@ To implement the GUI, PyTorch, NLTK, and creating the unit test, the following r
 - [Contextual Chatbots with Tensorflow - Article](https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077?gi=f7d03c3a78c3)
 - [Chat bot with PyTorch, NLP, and Deep Learning - YouTube](https://www.youtube.com/watch?v=RpWeNzfSUHw&list=PLqnslRFeH2UrFW4AUgn-eY37qOAWQpJyg&ab_channel=PythonEngineer)
 - [GUI with Tkinter - YouTube](https://www.youtube.com/watch?v=RNEcewpVZUQ)
-- [Testing in Python - Article by Real Python](https://realpython.com/python-testing)
+- [Testing in Python - Article from Real Python](https://realpython.com/python-testing)
