@@ -16,5 +16,15 @@ class TestBot(unittest.TestCase):
         userInput = type(self.app.name())
         self.assertEqual(userInput, 'str')
 
+    # def test_output(self):
+    # do some test to see if the conversation flows
+    # e.g. in reviewMessage, is positiveService revoke if review > 7? .....etc.
+
+    # def test_negativeReview(self):
+    # do some tes to see if the output is correct.
+    # e.g. if answer is "yes", would it output deepservice(serviceName)?
+    # if answer is "no", would it print "Thanks for your feedback"
+    # if answer is either yes or no, would it print "Didn't quite get that....."
+
 if __name__ == '__main__':
     unnitest.main()
