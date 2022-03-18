@@ -5,22 +5,34 @@ The purpose of this project is to create a customer service chat bot agent which
 To develop this software, our team decided to work with the Agile Scrum SDLC. The rationale behind choosing Scrum is because we wanted to follow a model that allows the flexibility to monitor the software development as the project is being developed throughout the term. Utilizing Scrum will allow the team to provide feedback throughout any stage of the project and iterate accordingly.
 
 ## Installation and Running the Chat Bot
-The chatbot currently works through the command line. Future versions will include a UI and enable users to use the chatbot without downloading.
-
 Either download this repository or clone it to your desired directory with 
 ```git clone https://github.com/mvallido/cosc310_team1_chatbot``` 
 in the command line
 
+### Create Virtual Environment (A3)
+```
+cd charbot_team1_chatbot
+python -m env chat_env
+```
+### Activate Virtual Environment (A3)
+```
+chat_env\Scripts\activate
+```
+![image](https://user-images.githubusercontent.com/61817636/158919972-9e390d45-5a4e-44e0-af77-280f602a2482.png)
+
 ### Install PyTorch and NLTK (A3)
 For PyTorch Installation, follow this [link](https://pytorch.org/get-started/locally/)
+![image](https://user-images.githubusercontent.com/61817636/158920135-d7c2b190-74a5-49c8-a346-c43ca8e1eae4.png)
 
 For NLTK, run the following commands in your CLI:
 ```pip install nltk```
 
 If you get an error trying to run the program, run the following:
 ```$ python
+>>> import nltk
 >>> import nltk.download('all')
 ```
+![image](https://user-images.githubusercontent.com/61817636/158920100-f462feea-6512-4bf1-a4b5-47d7d22e4503.png)
 
 ### Running Bot
 First, run:
@@ -31,6 +43,9 @@ Then, run app.py to start the chat bot:
 
 ## Conversation Flow (A3)
 ![image](https://user-images.githubusercontent.com/61817636/158088234-0a9e4185-52a1-454f-b4da-4a337ee09f65.png)
+
+### Demo (A3)
+https://user-images.githubusercontent.com/61817636/158919569-a8d33336-8998-41bd-b51b-806c0296ac02.mp4
 
 ## Coversation Structure
 
