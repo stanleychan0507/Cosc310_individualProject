@@ -215,3 +215,8 @@ For this individual project, I implemented the following APIs :
   * The wikipedia API is being used when users were asking to discuss a service. The chatbot will then use the Wikipedia API to find the information about the service from Wikipedia so it can be further explained to the customer.
 - Google Place API
   * The Google Place API is being used when users ask the different location site on the store. For an imagine scnario, this project uses the UBCO Campus as reference. Once the method is called by the user, it will find the nearby location on the campus using the built-in "places_nearby" function from the API, and list out all the location site around the campus.
+
+## References (A4)
+To implement the API, the following resources were used:
+- [Wikipedia API](https://towardsdatascience.com/wikipedia-api-for-python-241cfae09f1c)
+- [Google Place API](https://developers.google.com/maps/documentation/places/web-service/overview)
