@@ -1,11 +1,18 @@
 from urllib import response
-
+import wikipedia
+import googlemaps
+import pprint
+import time
 
 def opening_conversation():
     repeat = True
     while repeat == True:
-        product = input(f"Which product would you like to discuss?\n")
-        initial_conversation(product)
+        product = input(f"Do you want to discuss a product or see different location on the site?\n")
+        if product.lower() == "discuss a product":
+            product = input(f"Which product would you like to discuss?\n")
+            wikipedia_api(product)
+        elif product.lower() == "see different location":
+            googleplace_api(product)
         
 def initial_conversation(product):
     # Initial Prompt
@@ -33,8 +40,12 @@ def discuss_Another():
             opening_conversation()
             break
         elif reviewNextProduct.lower() == 'no':
-            print ("Thank you for your time")
-            quit()
+            seeSiteLocation = input(f"Do you want to see our the different location on our sites?")
+            if seeSiteLocation.lower() == 'yes':
+                googleplace_api()
+            elif seeSiteLocation.lower() == 'no':
+                print("Thank you for your time!")
+                quit()
         else: 
             reviewNextProduct = input(f"Didn't quite get that. Can you please indicate yes or no?\n")   
         break
@@ -45,7 +56,7 @@ def positive_feedback(product):
         review = input(f"Great! Would you like to review the {product}?\n")
         while True:
             if review.lower() == "no":
-                
+                discuss_Another()
                 break
             elif review.lower() == "yes":
                 write_review(product)
@@ -127,5 +138,22 @@ def deep_review(product):
         else: 
             deepReview = input(f"Didn't quite get that. Can you please indicate yes or no?\n")
         discuss_Another()              
-        
+
+def wikipedia_api(product):
+    print("Here are some information about your product :")
+    print(wikipedia.search(product))
+    initial_conversation(product)
+
+def googleplace_api(product):
+    print("Here are the different site around campus site :")
+    gmaps = googlemaps.Client(key = "AIzaSyCVm2ijkKshgMCpIhL8t1JksRPyRgJo8a4")
+    places_result = gmaps.places_nearby(location='49.940403, -119.395492', radius = 100, open_now = False, type = 'university')
+    for place in places_result['results']:
+        my_place_id = place['place_id']
+        my_fields = ['name', 'formatted_phone_number', 'type']
+        place_details = gmaps.place(place_id = my_place_id, fields = my_fields)
+        print(place_details)
+        break
+    opening_conversation(product)
+
 opening_conversation()
