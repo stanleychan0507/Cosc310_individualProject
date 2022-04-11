@@ -282,10 +282,14 @@ def deep_review(product):
             deepReview = input(f"Didn't quite get that. Can you please indicate yes or no?\n")
         discuss_Another()              
 
-def googleplace_api(product):
+def googleplace_api(response):
     print("Here are the different site around campus site :")
+
+    # Initialise Google map with API Key
     gmaps = googlemaps.Client(key = "AIzaSyCVm2ijkKshgMCpIhL8t1JksRPyRgJo8a4")
+    # Implement to find location on map
     places_result = gmaps.places_nearby(location='49.940403, -119.395492', radius = 50, open_now = False, type = 'university')
+    # Loop through results to get each near by location
     for place in places_result['results']:
         my_place_id = place['place_id']
         my_fields = ['name', 'formatted_phone_number', 'type']
