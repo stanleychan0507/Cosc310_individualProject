@@ -208,3 +208,8 @@ To implement the GUI, PyTorch, NLTK, and creating the unit test, the following r
 - [Chat bot with PyTorch, NLP, and Deep Learning - YouTube](https://www.youtube.com/watch?v=RpWeNzfSUHw&list=PLqnslRFeH2UrFW4AUgn-eY37qOAWQpJyg&ab_channel=PythonEngineer)
 - [GUI with Tkinter - YouTube](https://www.youtube.com/watch?v=RNEcewpVZUQ)
 - [Testing in Python - Article from Real Python](https://realpython.com/python-testing)
+
+## API Implementation (A4)
+For this individual project, I implemented the following APIs : 
+- Wikipedia API
+- Google Place API
